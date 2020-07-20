@@ -1,0 +1,400 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+body {
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* custom properties */
+
+:root {
+    --mainAccent: #16d1b2;
+    --secondaryAccent: #6dc4b5;
+    --mainBlack: #303030;
+    --mainGrey: #9fa5aa;
+    --secondaryGrey: #e2e4e4fa;
+    --mainWhite: #fff;
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 0.125em 0.125em 0.25em rgba(0, 0, 0, .15)
+}
+
+
+/* Navbar */
+
+.navbar {
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    background: rgba(55, 64, 77, 0.8)!important;
+}
+
+.navbar-brand i {
+    height: 2rem;
+}
+
+.navbar-nav li {
+    padding-right: 0.7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    transition: all 0.7s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--mainAccent);
+}
+
+
+/* End of Navbar */
+
+
+/* Slider */
+
+.carousel-item {
+    height: 100vh;
+}
+
+.btn {
+    margin: 0.2rem;
+    color: var(--mainAccent);
+    transition: all 0.5s ease;
+}
+
+.narrow {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.btn-md {
+    border-width: medium;
+    border-radius: 0;
+    padding: .6rem 1.1rem;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+.btn-secondary {
+    border-width: medium;
+    border-radius: 0;
+    padding: .6rem 1.2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 1rem;
+    border-color: #1EBBA3;
+    background-color: #1EBBA3;
+    color: var(--mainWhite);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    border-color: #189582;
+    background-color: #189582;
+    color: var(--mainWhite);
+}
+
+
+/* Store */
+
+.products-section {
+    padding: 80px 0 80px;
+    background-color: var(--mainWhite);
+}
+
+.products-section .products-item {
+    box-shadow: 0 0 10px #dddde3;
+}
+
+.products-section .product-img {
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+}
+
+.products-section .product-img .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.products-section .products-item:hover .product-img .overlay {
+    opacity: 1;
+}
+
+.products-section .product-img .overlay .btn {
+    margin: auto;
+    border: 1px solid var(--mainWhite);
+    border-radius: 5px;
+    transform: translateY(100px);
+    transition: all 0.5s ease;
+}
+
+.products-section .product-img .overlay .btn:hover {
+    color: var(--mainWhite);
+}
+
+.products-section .products-item:hover .product-img .overlay .btn {
+    transform: translateY(0px);
+}
+
+.products-section .products-item .product-img img {
+    width: 100%;
+    display: block;
+}
+
+.products-section .product-content {
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.products-section .product-content .product-price {
+    margin: 15px 0 5px;
+}
+
+.products-section .product-content .product-price .new-price {
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    margin: 0 5px;
+    color: var(--mainAccent);
+}
+
+.products-section .product-content .product-price .old-price {
+    font-size: 18px;
+    display: inline-block;
+    color: #959595;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+.products-section .product-content .product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222222;
+    line-height: 26px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+/* Store end */
+
+
+/* About section */
+
+.about-section {
+    background-color: var(--secondaryGrey);
+    padding: 80px 0 80px;
+}
+
+.about-section .about-img {
+    margin: auto;
+}
+
+.about-section .about-img img {
+    max-width: 500px;
+    width: 100%;
+    box-shadow: var(--bs);
+}
+
+.about-section .title {
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.about-section .subtitle {
+    text-align: left;
+}
+
+.about-section #modal-btn {
+    margin: auto;
+    background-color: transparent;
+    border-color: #189582;
+    color: #189582;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-btn:hover {
+    background-color: var(--mainAccent);
+    color: var(--mainBlack);
+}
+
+
+/* About section end */
+
+
+/* Contact section */
+
+.contact-section {
+    background-color: var(--mainWhite);
+    padding: 80px 0 80px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 2.5em;
+    border: 1px solid var(--mainAccent);
+    border-radius: 5px;
+}
+
+.contact-section .contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-section .contact-form .form-control {
+    height: 50px;
+    color: #555555;
+    border: none;
+    border-bottom: 1px solid var(--mainAccent);
+    border-radius: 0px;
+}
+
+.contact-section .contact-form text-area.form-control {
+    height: 120px;
+}
+
+.contact-section .contact-form .form-control:focus {
+    box-shadow: none;
+}
+
+.row .btn {
+    border-color: #189582;
+    color: #189582;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.row .btn:hover {
+    background-color: var(--mainAccent);
+    color: var(--mainBlack);
+}
+
+.contact-section .contact-item {
+    position: relative;
+    padding-left: 65px;
+    margin-bottom: 35px;
+}
+
+.contact-section .contact-item .icon {
+    height: 50px;
+    width: 50px;
+    background-color: #e0e0e2;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.icon i {
+    line-height: 50px;
+    font-size: 20px;
+    color: var(--mainAccent);
+}
+
+.contact-item a:hover {
+    text-decoration: none;
+    color: #f15f5f;
+}
+
+.contact-section .contact-item h5 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-bottom: 0 0 2px;
+}
+
+.contact-section .contact-item p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #555555;
+    margin: 0;
+}
+
+
+/* End of contact section */
+
+
+/* Footer section */
+
+.footer {
+    background-color: var(--mainBlack);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.footer .footer-logo a {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--mainWhite);
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    margin: 0 0 15px;
+    transition: all 0.7s ease;
+}
+
+.footer .footer-logo a:hover {
+    color: var(--mainAccent);
+}
+
+.footer .footer-text p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #eeeeee;
+    font-weight: 500;
+    margin: 0 0 25px;
+}
+
+.footer .footer-social-links a {
+    display: inline-block;
+    text-align: center;
+    margin: 0 4px;
+}
+
+.footer .footer-social-links a i {
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--mainWhite);
+    display: block;
+    color: var(--mainWhite);
+    line-height: 38px;
+    border-radius: 50%;
+    transition: all 0.7s ease;
+}
+
+.footer .footer-social-links a i:hover {
+    color: var(--mainAccent);
+}
+
+
+/* End of Footer section */
